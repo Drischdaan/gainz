@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import appConfig from './app.config';
 import { validateEnvironmentVariables } from './env.config';
+import { PingController } from './ping/ping.controller';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { validateEnvironmentVariables } from './env.config';
       load: [appConfig],
     }),
   ],
-  controllers: [],
+  controllers: [PingController],
   providers: [],
 })
 export class AppModule {}
