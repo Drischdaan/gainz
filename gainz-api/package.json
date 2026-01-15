@@ -2,7 +2,19 @@
   "name": "@gainz-api/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run gainz-api:serve --configuration=development",
+    "build": "nx run gainz-api:build --configuration=development",
+    "build:prod": "nx run gainz-api:build --configuration=production",
+    "lint": "nx run gainz-api:lint",
+    "lint:fix": "nx run gainz-api:lint --fix",
+    "format:check": "nx format:check",
+    "format:write": "nx format:write",
+    "test": "nx run gainz-api:test",
+    "test:coverage": "nx run gainz-api:test --coverage",
+    "test:e2e": "nx run gainz-api-e2e:e2e",
+    "test:e2e:coverage": "nx run gainz-api-e2e:e2e  --coverage"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^11.0.0",
