@@ -2,7 +2,19 @@
   "name": "@gainz-client/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run gainz-client:serve --configuration=development",
+    "build": "nx run gainz-client:build --configuration=development",
+    "build:prod": "nx run gainz-client:build --configuration=production",
+    "lint": "nx run gainz-client:lint",
+    "lint:fix": "nx run gainz-client:lint --fix",
+    "format:check": "nx format:check",
+    "format:write": "nx format:write",
+    "test": "nx run gainz-client:test --watch=false",
+    "test:coverage": "nx run gainz-client:test --coverage --watch=false",
+    "test:e2e": "nx run gainz-client-e2e:e2e",
+    "test:e2e:coverage": "nx run gainz-client-e2e:e2e --coverage"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "~21.0.0",
@@ -35,6 +47,7 @@
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
     "@typescript-eslint/utils": "^8.40.0",
+    "@vitest/coverage-v8": "^4.0.17",
     "angular-eslint": "^21.0.1",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
