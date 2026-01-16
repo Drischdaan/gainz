@@ -5,6 +5,19 @@
   "compilerOptions": {
     "deleteOutDir": true,
     "builder": "swc",
-    "typeCheck": true
+    "typeCheck": true,
+    "webpack": true
+  },
+  "defaultLibraryPrefix": "@gainz-api",
+  "projects": {
+    "feature-database": {
+      "type": "library",
+      "root": "libs/features/feature-database",
+      "entryFile": "index",
+      "sourceRoot": "libs/features/feature-database/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/features/feature-database/tsconfig.lib.json"
+      }
+    }
   }
 }

@@ -1,22 +1,18 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import { TestBed } from '@suites/unit';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 
 describe('AppController', () => {
   let appController: AppController;
 
   beforeEach(async () => {
-    const app: TestingModule = await Test.createTestingModule({
-      controllers: [AppController],
-      providers: [AppService],
-    }).compile();
+    const { unit } = await TestBed.solitary(AppController).compile();
 
-    appController = app.get<AppController>(AppController);
+    appController = unit;
   });
 
-  describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+  describe('/ping', () => {
+    it('should return "pong"', () => {
+      expect(appController.getPing()).toEqual({ ping: 'pong' });
     });
   });
 });
