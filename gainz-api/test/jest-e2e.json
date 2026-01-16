@@ -11,6 +11,7 @@
     "^.+\\.(t|j)s$": "ts-jest"
   },
   "moduleNameMapper": {
+    "^@gainz-api/feature-correlation(|/.*)$": "<rootDir>/../libs/features/feature-correlation/src/$1",
     "^@gainz-api/feature-database(|/.*)$": "<rootDir>/../libs/features/feature-database/src/$1"
   }
 }

@@ -10,6 +10,15 @@
   },
   "defaultLibraryPrefix": "@gainz-api",
   "projects": {
+    "feature-correlation": {
+      "type": "library",
+      "root": "libs/features/feature-correlation",
+      "entryFile": "index",
+      "sourceRoot": "libs/features/feature-correlation/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/features/feature-correlation/tsconfig.lib.json"
+      }
+    },
     "feature-database": {
       "type": "library",
       "root": "libs/features/feature-database",

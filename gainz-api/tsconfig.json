@@ -18,6 +18,12 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
+      "@gainz-api/feature-correlation": [
+        "libs/features/feature-correlation/src"
+      ],
+      "@gainz-api/feature-correlation/*": [
+        "libs/features/feature-correlation/src/*"
+      ],
       "@gainz-api/feature-database": [
         "libs/features/feature-database/src"
       ],
