@@ -17,7 +17,6 @@ export class CorrelationInterceptor implements NestInterceptor {
     const response = context.switchToHttp().getResponse<Response>();
 
     let correlationId = request.headers[CORRELATION_ID_KEY.toLowerCase()];
-    console.log(correlationId);
     if (correlationId === undefined) {
       correlationId = randomUUID();
     }
